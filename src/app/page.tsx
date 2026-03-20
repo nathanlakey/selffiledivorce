@@ -1,8 +1,12 @@
+import type { Metadata } from 'next'
+import { HomepageClient } from '@/components/HomepageClient'
+
+export const metadata: Metadata = {
+  title: 'SelfFileDivorce.com — Free Divorce Guides for All 50 States (2026)',
+  description: 'Free step-by-step DIY divorce guides for all 50 US states. Filing fees, official forms, timelines, property division, and more. No lawyer required for uncontested divorces.',
+  keywords: ['DIY divorce', 'file for divorce without a lawyer', 'divorce guide by state', 'divorce forms', 'uncontested divorce'],
+}
+
 export default function HomePage() {
-  return (
-    <div className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="font-display text-4xl font-black text-navy mb-4">Coming Soon</h1>
-      <p className="font-body text-text-muted">This page is under construction.</p>
-    </div>
-  )
+  return <HomepageClient />
 }
