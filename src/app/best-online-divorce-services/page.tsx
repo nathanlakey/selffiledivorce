@@ -1,8 +1,12 @@
-export default function PlaceholderPage() {
-  return (
-    <div className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="font-display text-4xl font-black text-navy mb-4">Coming Soon</h1>
-      <p className="font-body text-text-muted">This page is under construction.</p>
-    </div>
-  )
+import type { Metadata } from 'next'
+import { OnlineServicesClient } from '@/components/OnlineServicesClient'
+
+export const metadata: Metadata = {
+  title: 'Best Online Divorce Services 2026 — Compared & Reviewed',
+  description: 'Honest comparison of the top online divorce services: 3StepDivorce, CompleteCase, WeVorce, and more. Prices, features, and who each is best for.',
+  keywords: ['best online divorce service', 'online divorce review', 'cheap online divorce', 'uncontested divorce online'],
+}
+
+export default function BestOnlineDivorceServicesPage() {
+  return <OnlineServicesClient />
 }
