@@ -1,3 +1,13 @@
+---
+state: "California"
+residency: "6 months state, 3 months county"
+waitPeriod: "6 months from service"
+filingFee: "$435 per spouse"
+propertyType: "Community Property"
+court: "Superior Court"
+lastUpdated: "March 2026"
+---
+
 # California Divorce With Children (2026) — Custody, Support, and What to Expect
 
 Divorcing when you have minor children in California adds important layers to the process — but it's still very manageable without a lawyer if you and your spouse are in full agreement on custody, parenting time, and child support.

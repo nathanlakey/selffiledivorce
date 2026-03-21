@@ -1,3 +1,13 @@
+---
+state: "California"
+residency: "6 months state, 3 months county"
+waitPeriod: "6 months from service"
+filingFee: "$435 per spouse"
+propertyType: "Community Property"
+court: "Superior Court"
+lastUpdated: "March 2026"
+---
+
 # California Divorce Without Children (2026) — File It Yourself
 
 If you and your spouse don't have minor children together, you're in the best position to handle your own California divorce. No custody arrangement, no child support, no parenting plan — just ending the marriage and dividing what you own and owe.
