@@ -1,8 +1,12 @@
-export default function PlaceholderPage() {
-  return (
-    <div className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="font-display text-4xl font-black text-navy mb-4">Coming Soon</h1>
-      <p className="font-body text-text-muted">This page is under construction.</p>
-    </div>
-  )
+import type { Metadata } from 'next'
+import { CostPageClient } from '@/components/CostPageClient'
+
+export const metadata: Metadata = {
+  title: 'How Much Does Divorce Cost by State? (2026 Complete Guide)',
+  description: 'Filing fees, DIY costs, and attorney fees for all 50 states. From $80 in North Dakota to $435 in California. Updated March 2026.',
+  keywords: ['divorce cost by state', 'divorce filing fees', 'how much does divorce cost', 'cheap divorce'],
+}
+
+export default function CostPage() {
+  return <CostPageClient />
 }

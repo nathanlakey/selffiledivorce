@@ -1,8 +1,12 @@
-export default function PlaceholderPage() {
-  return (
-    <div className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="font-display text-4xl font-black text-navy mb-4">Coming Soon</h1>
-      <p className="font-body text-text-muted">This page is under construction.</p>
-    </div>
-  )
+import type { Metadata } from 'next'
+import { TimelinePageClient } from '@/components/TimelinePageClient'
+
+export const metadata: Metadata = {
+  title: 'How Long Does Divorce Take by State? (2026 Guide)',
+  description: 'Waiting periods, residency requirements, and realistic divorce timelines for all 50 states. From 10 days (Oklahoma) to over a year (North Carolina). Updated 2026.',
+  keywords: ['how long does divorce take', 'divorce waiting period by state', 'divorce timeline', 'divorce residency requirements'],
+}
+
+export default function TimelinePage() {
+  return <TimelinePageClient />
 }
