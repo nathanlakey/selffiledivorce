@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { OnlineServicesClient } from '@/components/OnlineServicesClient'
+import { AffiliatePageClient } from '@/components/AffiliatePageClient'
 
 export const metadata: Metadata = {
-  title: 'Best Online Divorce Services 2026 — Compared & Reviewed',
-  description: 'Honest comparison of the top online divorce services: 3StepDivorce, CompleteCase, WeVorce, and more. Prices, features, and who each is best for.',
-  keywords: ['best online divorce service', 'online divorce review', 'cheap online divorce', 'uncontested divorce online'],
+  title: 'Best Online Divorce Services of 2026 — Ranked and Reviewed',
+  description: 'We reviewed 12 online divorce services. Here are the 5 best ranked by price, ratings, features, and value. Updated March 2026.',
+  keywords: ['best online divorce service', 'online divorce reviews', '3StepDivorce review', 'cheapest online divorce'],
 }
 
-export default function BestOnlineDivorceServicesPage() {
-  return <OnlineServicesClient />
+export default function AffiliatePage() {
+  return <AffiliatePageClient />
 }

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { LawyerQuizClient } from '@/components/LawyerQuizClient'
+import { QuizClient } from '@/components/QuizClient'
 
 export const metadata: Metadata = {
-  title: 'Do I Need a Lawyer for Divorce? (2026 Honest Guide)',
-  description: 'Take our free quiz to find out if you truly need a divorce attorney — or if DIY, mediation, or online services will work for your situation.',
-  keywords: ['do i need a divorce lawyer', 'divorce without a lawyer', 'pro se divorce', 'uncontested divorce'],
+  title: 'Do I Need a Lawyer for My Divorce? Free 7-Question Assessment',
+  description: 'Answer 7 quick questions to find out if DIY divorce, an online service, or an attorney is right for your situation. Free, no signup required.',
+  keywords: ['do I need a lawyer for divorce', 'DIY divorce quiz', 'uncontested divorce assessment'],
 }
 
-export default function DoINeedALawyerPage() {
-  return <LawyerQuizClient />
+export default function QuizPage() {
+  return <QuizClient />
 }
