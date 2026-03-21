@@ -16,19 +16,19 @@ interface StateGuideLayoutProps {
 }
 
 const GUIDE_LINKS = [
-  { slug: '', label: 'Main Guide' },
-  { slug: '/without-children', label: 'Without Children' },
-  { slug: '/with-children', label: 'With Children' },
-  { slug: '/filing-fees', label: 'Filing Fees' },
-  { slug: '/forms', label: 'Forms Guide' },
-  { slug: '/timeline', label: 'Timeline' },
-  { slug: '/with-a-house', label: 'With a House' },
-  { slug: '/default-divorce', label: 'Default Divorce' },
-  { slug: '/mistakes-to-avoid', label: 'Mistakes to Avoid' },
-  { slug: '/property-division', label: 'Property Division' },
-  { slug: '/checklist', label: 'Checklist' },
-  { slug: '/faq', label: 'FAQ' },
-  { slug: '/eligibility', label: 'Am I Eligible?' },
+  { suffix: '', label: 'Main Guide' },
+  { suffix: '-without-children', label: 'Without Children' },
+  { suffix: '-with-children', label: 'With Children' },
+  { suffix: '-filing-fees', label: 'Filing Fees' },
+  { suffix: '-forms', label: 'Forms Guide' },
+  { suffix: '-timeline', label: 'Timeline' },
+  { suffix: '-with-a-house', label: 'With a House' },
+  { suffix: '-default-divorce', label: 'Default Divorce' },
+  { suffix: '-mistakes-to-avoid', label: 'Mistakes to Avoid' },
+  { suffix: '-property-division', label: 'Property Division' },
+  { suffix: '-checklist', label: 'Checklist' },
+  { suffix: '-faq', label: 'FAQ' },
+  { suffix: '-eligibility', label: 'Am I Eligible?' },
 ]
 
 export function StateGuideLayout({
@@ -38,8 +38,6 @@ export function StateGuideLayout({
   children,
   frontmatter,
 }: StateGuideLayoutProps) {
-  const baseHref = `/${stateSlug}-divorce`
-
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-8 py-12">
 
@@ -49,12 +47,12 @@ export function StateGuideLayout({
         <span>›</span>
         <Link href="/divorce-by-state" className="hover:text-gold transition-colors">All States</Link>
         <span>›</span>
-        <Link href={baseHref} className="hover:text-gold transition-colors">{stateName}</Link>
+        <Link href={`/${stateSlug}-divorce`} className="hover:text-gold transition-colors">{stateName}</Link>
         {currentGuide !== '' && (
           <>
             <span>›</span>
             <span className="text-text-muted">
-              {GUIDE_LINKS.find(g => g.slug === currentGuide)?.label}
+              {GUIDE_LINKS.find(g => g.suffix === currentGuide)?.label}
             </span>
           </>
         )}
@@ -95,11 +93,11 @@ export function StateGuideLayout({
               {stateName} Guides
             </p>
             {GUIDE_LINKS.map(link => {
-              const isActive = currentGuide === link.slug
+              const isActive = currentGuide === link.suffix
               return (
                 <Link
-                  key={link.slug}
-                  href={`${baseHref}${link.slug}`}
+                  key={link.suffix}
+                  href={`/${stateSlug}-divorce${link.suffix}`}
                   className={`block font-body text-[13px] px-4 py-2.5 border-b border-border-light last:border-b-0 transition-colors ${
                     isActive
                       ? 'bg-navy text-cream-dark font-semibold'

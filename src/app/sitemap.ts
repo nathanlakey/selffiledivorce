@@ -21,18 +21,18 @@ const STATIC_ROUTES = [
 
 const STATE_SUB_ROUTES = [
   '',
-  '/eligibility',
-  '/filing-fees',
-  '/timeline',
-  '/checklist',
-  '/forms',
-  '/with-children',
-  '/without-children',
-  '/property-division',
-  '/with-a-house',
-  '/default-divorce',
-  '/mistakes-to-avoid',
-  '/faq',
+  '-eligibility',
+  '-filing-fees',
+  '-timeline',
+  '-checklist',
+  '-forms',
+  '-with-children',
+  '-without-children',
+  '-property-division',
+  '-with-a-house',
+  '-default-divorce',
+  '-mistakes-to-avoid',
+  '-faq',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
