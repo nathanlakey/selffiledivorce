@@ -88,7 +88,7 @@ const FAQS = [
   },
   {
     q: 'Is this site free?',
-    a: 'Yes. All state guides, checklists, and resources on SelfFileDivorce.com are completely free. We earn revenue through advertising and optional affiliate links to online divorce services (always clearly labeled).',
+    a: 'Yes. All state guides, checklists, and resources on SoLongSoulmate.com are completely free. We earn revenue through advertising and optional affiliate links to online divorce services (always clearly labeled).',
   },
 ]
 

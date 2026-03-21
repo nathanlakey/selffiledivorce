@@ -20,13 +20,13 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | SelfFileDivorce.com',
-    default: 'SelfFileDivorce.com — Free Divorce Guides for All 50 States',
+    template: '%s | SoLongSoulmate.com',
+    default: 'SoLongSoulmate.com — Free Divorce Guides for All 50 States',
   },
   description: 'Free step-by-step divorce guides for all 50 US states. Filing fees, forms, timelines, property division, and more. Updated 2026.',
-  metadataBase: new URL('https://selffiledivorce.com'),
+  metadataBase: new URL('https://solongsoulmate.com'),
   openGraph: {
-    siteName: 'SelfFileDivorce.com',
+    siteName: 'SoLongSoulmate.com',
     type: 'website',
   },
 }

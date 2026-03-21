@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Legal Disclaimer — SelfFileDivorce.com',
-  description: 'Legal disclaimer for SelfFileDivorce.com. This site provides general legal information, not legal advice.',
+  title: 'Legal Disclaimer — SoLongSoulmate.com',
+  description: 'Legal disclaimer for SoLongSoulmate.com. This site provides general legal information, not legal advice.',
 }
 
 export default function DisclaimerPage() {
@@ -15,12 +15,12 @@ export default function DisclaimerPage() {
       <div className="prose-content">
         <h2>Not Legal Advice</h2>
         <p>
-          The information on SelfFileDivorce.com is provided for general informational purposes only. It is <strong>not legal advice</strong> and does not create an attorney-client relationship. You should not act or refrain from acting based on anything on this website without first consulting a licensed attorney in your jurisdiction.
+          The information on SoLongSoulmate.com is provided for general informational purposes only. It is <strong>not legal advice</strong> and does not create an attorney-client relationship. You should not act or refrain from acting based on anything on this website without first consulting a licensed attorney in your jurisdiction.
         </p>
 
         <h2>No Attorney-Client Relationship</h2>
         <p>
-          Use of this website does not create an attorney-client relationship between you and SelfFileDivorce.com or any of its contributors. We are not a law firm.
+          Use of this website does not create an attorney-client relationship between you and SoLongSoulmate.com or any of its contributors. We are not a law firm.
         </p>
 
         <h2>Accuracy of Information</h2>
@@ -35,7 +35,7 @@ export default function DisclaimerPage() {
 
         <h2>Limitation of Liability</h2>
         <p>
-          SelfFileDivorce.com, its owners, contributors, and affiliates are not liable for any damages arising from your use of, or reliance on, any information provided on this website.
+          SoLongSoulmate.com, its owners, contributors, and affiliates are not liable for any damages arising from your use of, or reliance on, any information provided on this website.
         </p>
 
         <h2>Affiliate Disclosure</h2>

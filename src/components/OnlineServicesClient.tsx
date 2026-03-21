@@ -261,7 +261,7 @@ export function OnlineServicesClient() {
       </section>
 
       <p className="font-body text-xs text-text-light text-center py-6 px-6 max-w-3xl mx-auto">
-        <strong>Disclosure:</strong> SelfFileDivorce.com may receive compensation if you use links to the services above. This does not affect our recommendations — we only list services we believe provide genuine value. All prices verified March 2026.
+        <strong>Disclosure:</strong> SoLongSoulmate.com may receive compensation if you use links to the services above. This does not affect our recommendations — we only list services we believe provide genuine value. All prices verified March 2026.
       </p>
     </>
   )

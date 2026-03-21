@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { US_STATES } from '@/lib/states'
 
-const BASE = 'https://www.selffiledivorce.com'
+const BASE = 'https://www.solongsoulmate.com'
 
 const STATIC_ROUTES = [
   { url: '/', priority: 1.0, changeFrequency: 'monthly' as const },

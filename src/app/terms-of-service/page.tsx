@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — SelfFileDivorce.com',
-  description: 'Terms of service for SelfFileDivorce.com.',
+  title: 'Terms of Service — SoLongSoulmate.com',
+  description: 'Terms of service for SoLongSoulmate.com.',
 }
 
 export default function TermsOfServicePage() {
@@ -15,7 +15,7 @@ export default function TermsOfServicePage() {
       <div className="prose-content">
         <h2>Acceptance of Terms</h2>
         <p>
-          By accessing SelfFileDivorce.com, you agree to these Terms of Service. If you do not agree, do not use this site.
+          By accessing SoLongSoulmate.com, you agree to these Terms of Service. If you do not agree, do not use this site.
         </p>
 
         <h2>Use of the Site</h2>
@@ -29,7 +29,7 @@ export default function TermsOfServicePage() {
 
         <h2>Intellectual Property</h2>
         <p>
-          All content on this site — including text, guides, data compilations, and design — is owned by SelfFileDivorce.com unless otherwise noted. Forms sourced from government websites are in the public domain.
+          All content on this site — including text, guides, data compilations, and design — is owned by SoLongSoulmate.com unless otherwise noted. Forms sourced from government websites are in the public domain.
         </p>
 
         <h2>Disclaimer of Warranties</h2>
@@ -39,7 +39,7 @@ export default function TermsOfServicePage() {
 
         <h2>Limitation of Liability</h2>
         <p>
-          To the fullest extent permitted by law, SelfFileDivorce.com is not liable for any indirect, incidental, special, or consequential damages arising from your use of this site.
+          To the fullest extent permitted by law, SoLongSoulmate.com is not liable for any indirect, incidental, special, or consequential damages arising from your use of this site.
         </p>
 
         <h2>External Links</h2>
@@ -58,7 +58,7 @@ export default function TermsOfServicePage() {
         </p>
 
         <h2>Contact</h2>
-        <p>Questions: <strong>hello@selffiledivorce.com</strong></p>
+        <p>Questions: <strong>hello@solongsoulmate.com</strong></p>
       </div>
     </div>
   )

@@ -2,19 +2,19 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About SelfFileDivorce.com',
-  description: 'SelfFileDivorce.com provides free, accurate divorce guides for all 50 states. Learn about our mission, editorial standards, and how we help people navigate the divorce process.',
+  title: 'About SoLongSoulmate.com',
+  description: 'SoLongSoulmate.com provides free, accurate divorce guides for all 50 states. Learn about our mission, editorial standards, and how we help people navigate the divorce process.',
 }
 
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
       <p className="section-eyebrow mb-3">About Us</p>
-      <h1 className="font-display text-4xl font-black text-navy mb-6">About SelfFileDivorce.com</h1>
+      <h1 className="font-display text-4xl font-black text-navy mb-6">About SoLongSoulmate.com</h1>
 
       <div className="prose-content">
         <p>
-          <strong>SelfFileDivorce.com</strong> was built on a simple belief: understanding how to navigate a divorce should not cost $300/hour.
+          <strong>SoLongSoulmate.com</strong> was built on a simple belief: understanding how to navigate a divorce should not cost $300/hour.
         </p>
 
         <h2>Our Mission</h2>
@@ -41,12 +41,12 @@ export default function AboutPage() {
 
         <h2>How We're Funded</h2>
         <p>
-          SelfFileDivorce.com earns revenue through affiliate relationships with online divorce services (clearly disclosed on relevant pages) and display advertising. These relationships do not affect our editorial coverage — we do not recommend services because they pay us; we only list services we believe provide genuine value.
+          SoLongSoulmate.com earns revenue through affiliate relationships with online divorce services (clearly disclosed on relevant pages) and display advertising. These relationships do not affect our editorial coverage — we do not recommend services because they pay us; we only list services we believe provide genuine value.
         </p>
 
         <h2>Contact</h2>
         <p>
-          For corrections, questions, or partnership inquiries, email us at: <strong>hello@selffiledivorce.com</strong>
+          For corrections, questions, or partnership inquiries, email us at: <strong>hello@solongsoulmate.com</strong>
         </p>
       </div>
 

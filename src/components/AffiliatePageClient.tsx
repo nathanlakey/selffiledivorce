@@ -256,7 +256,7 @@ export function AffiliatePageClient() {
       </section>
 
       <p className="font-body text-xs text-text-light text-center py-6 px-6 max-w-3xl mx-auto">
-        <strong>Disclosure:</strong> SelfFileDivorce.com earns commissions from affiliate partnerships with some services listed on this page. Our editorial rankings are based on independent research including customer reviews, BBB ratings, pricing, and features — not affiliate commission rates. Prices verified March 2026. General information only — not legal advice.
+        <strong>Disclosure:</strong> SoLongSoulmate.com earns commissions from affiliate partnerships with some services listed on this page. Our editorial rankings are based on independent research including customer reviews, BBB ratings, pricing, and features — not affiliate commission rates. Prices verified March 2026. General information only — not legal advice.
       </p>
     </>
   )

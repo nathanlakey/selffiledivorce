@@ -11,7 +11,7 @@ export function SiteFooter() {
     <footer className="bg-navy-dark text-cream-dark/40 pt-12 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="font-display text-xl font-black text-cream-dark mb-1">
-          SelfFile<span className="text-gold">Divorce</span>.com
+          SoLong<span className="text-gold">Soulmate</span>.com
         </div>
         <p className="font-body text-[13px] mb-10">Free DIY divorce guides for all 50 states.</p>
 
@@ -74,11 +74,11 @@ export function SiteFooter() {
         </div>
 
         <p className="font-body text-[12px] text-cream-dark/30 leading-relaxed max-w-3xl mb-6">
-          SelfFileDivorce.com provides general legal information, not legal advice. Nothing on this site creates an attorney-client relationship. Laws vary by state and change frequently — verify all information with your local court before filing. Consult a licensed family law attorney for advice specific to your situation.
+          SoLongSoulmate.com provides general legal information, not legal advice. Nothing on this site creates an attorney-client relationship. Laws vary by state and change frequently — verify all information with your local court before filing. Consult a licensed family law attorney for advice specific to your situation.
         </p>
 
         <div className="border-t border-white/[0.06] pt-5 flex flex-wrap justify-between gap-3">
-          <p className="font-body text-[12px]">© 2026 SelfFileDivorce.com. All rights reserved.</p>
+          <p className="font-body text-[12px]">© 2026 SoLongSoulmate.com. All rights reserved.</p>
           <p className="font-body text-[12px]">General information only — not legal advice.</p>
         </div>
       </div>

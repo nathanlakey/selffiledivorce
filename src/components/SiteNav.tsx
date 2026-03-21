@@ -10,7 +10,7 @@ export function SiteNav() {
     <nav className="bg-navy sticky top-0 z-50 h-[60px] flex items-center px-6 md:px-8">
       <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
         <Link href="/" className="font-display text-xl font-black text-cream-dark tracking-tight">
-          SelfFile<span className="text-gold">Divorce</span>.com
+          SoLong<span className="text-gold">Soulmate</span>.com
         </Link>
 
         {/* Desktop links */}

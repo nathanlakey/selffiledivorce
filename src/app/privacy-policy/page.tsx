@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — SelfFileDivorce.com',
-  description: 'Privacy policy for SelfFileDivorce.com. How we collect, use, and protect your information.',
+  title: 'Privacy Policy — SoLongSoulmate.com',
+  description: 'Privacy policy for SoLongSoulmate.com. How we collect, use, and protect your information.',
 }
 
 export default function PrivacyPolicyPage() {
@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
       <div className="prose-content">
         <h2>Information We Collect</h2>
         <p>
-          SelfFileDivorce.com collects the following types of information:
+          SoLongSoulmate.com collects the following types of information:
         </p>
         <ul>
           <li><strong>Usage data:</strong> Pages viewed, time on site, referring URLs, browser type, and device type, collected via Google Analytics.</li>
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
 
         <h2>Your Rights</h2>
         <p>
-          You may request deletion of any personal data we hold about you by emailing hello@selffiledivorce.com. EU/EEA residents have additional rights under GDPR.
+          You may request deletion of any personal data we hold about you by emailing hello@solongsoulmate.com. EU/EEA residents have additional rights under GDPR.
         </p>
 
         <h2>Children's Privacy</h2>
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
         </p>
 
         <h2>Contact</h2>
-        <p>Questions about this policy: <strong>hello@selffiledivorce.com</strong></p>
+        <p>Questions about this policy: <strong>hello@solongsoulmate.com</strong></p>
       </div>
     </div>
   )
