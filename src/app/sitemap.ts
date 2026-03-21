@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next'
 import { US_STATES } from '@/lib/states'
 
-const BASE = 'https://www.solongsoulmate.com'
+const BASE = 'https://solongsoulmate.com'
 
 const STATIC_ROUTES = [
-  { url: '/', priority: 1.0, changeFrequency: 'monthly' as const },
+  { url: '/', priority: 1.0, changeFrequency: 'weekly' as const },
   { url: '/divorce-by-state', priority: 0.9, changeFrequency: 'monthly' as const },
   { url: '/do-i-need-a-lawyer', priority: 0.9, changeFrequency: 'monthly' as const },
   { url: '/best-online-divorce-services', priority: 0.9, changeFrequency: 'monthly' as const },
@@ -38,7 +38,7 @@ const STATE_SUB_ROUTES = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = STATIC_ROUTES.map(r => ({
     url: `${BASE}${r.url}`,
-    lastModified: new Date('2026-03-20'),
+    lastModified: new Date(),
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }))
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const stateEntries = US_STATES.flatMap(state =>
     STATE_SUB_ROUTES.map((sub, i) => ({
       url: `${BASE}/${state.slug}-divorce${sub}`,
-      lastModified: new Date('2026-03-20'),
+      lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: i === 0 ? 0.8 : 0.6,
     }))

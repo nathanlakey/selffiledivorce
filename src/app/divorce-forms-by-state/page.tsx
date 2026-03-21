@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Free Divorce Forms by State (2026) — Official Court Links',
   description: 'Official court form portals for all 50 states. Direct links to free divorce forms — no third-party sites, no fees. Updated March 2026.',
   keywords: ['free divorce forms', 'divorce forms by state', 'divorce court forms', 'official divorce forms'],
+  alternates: {
+    canonical: 'https://solongsoulmate.com/divorce-forms-by-state',
+  },
 }
 
 export default function FormsPage() {

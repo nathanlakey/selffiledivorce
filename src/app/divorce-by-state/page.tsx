@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Divorce Guides by State — All 50 States (2026)',
   description: 'Complete step-by-step divorce guides for every US state. 13 guides per state — forms, fees, timelines, property division, and more. Free, updated 2026.',
   keywords: ['divorce by state', 'state divorce guide', 'divorce laws by state', 'how to file for divorce'],
+  alternates: {
+    canonical: 'https://solongsoulmate.com/divorce-by-state',
+  },
 }
 
 export default function DivorceByStatePage() {

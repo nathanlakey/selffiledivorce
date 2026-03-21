@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import { US_STATES } from '@/lib/states'
 import { getStateContent } from '@/lib/content'
 import { StateGuideLayout } from '@/components/StateGuideLayout'
+import { JsonLd } from '@/components/JsonLd'
 
 export async function generateStaticParams() {
   return US_STATES.map(s => ({ state: s.slug }))
@@ -26,7 +27,20 @@ export async function generateMetadata({
   return {
     title,
     description,
-    openGraph: { title, description },
+    openGraph: {
+      title,
+      description,
+      url: `https://solongsoulmate.com/${state}-divorce`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://solongsoulmate.com/${state}-divorce`,
+    },
   }
 }
 
@@ -41,8 +55,28 @@ export default async function StateDivorcePage({
 
   const data = getStateContent(state, 'main')
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: data?.frontmatter.title ?? `How to File for Divorce in ${stateObj.name} Without a Lawyer (2026)`,
+    description: data?.frontmatter.description ?? `Complete guide to ${stateObj.name} divorce.`,
+    url: `https://solongsoulmate.com/${state}-divorce`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'SoLongSoulmate.com',
+      url: 'https://solongsoulmate.com',
+    },
+    dateModified: new Date().toISOString().split('T')[0],
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://solongsoulmate.com/${state}-divorce`,
+    },
+  }
+
   return (
-    <StateGuideLayout
+    <>
+      <JsonLd data={jsonLd} />
+      <StateGuideLayout
       stateName={stateObj.name}
       stateSlug={stateObj.slug}
       currentGuide=""
@@ -67,5 +101,6 @@ export default async function StateDivorcePage({
         </div>
       )}
     </StateGuideLayout>
+    </>
   )
 }

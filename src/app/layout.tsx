@@ -3,6 +3,7 @@ import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 import { SiteNav } from '@/components/SiteNav'
 import { SiteFooter } from '@/components/SiteFooter'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -28,6 +29,22 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: 'SoLongSoulmate.com',
     type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@solongsoulmate',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -36,9 +53,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? ''
+
   return (
     <html lang="en" className={`${playfair.variable} ${sourceSans.variable}`}>
       <body className="bg-cream font-body text-text antialiased">
+        <GoogleAnalytics measurementId={gaMeasurementId} />
         <SiteNav />
         <main>{children}</main>
         <SiteFooter />
