@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const POPULAR_STATES = ['Texas', 'California', 'Florida', 'New York', 'Georgia', 'Illinois']
 
@@ -10,8 +11,14 @@ export function SiteFooter() {
   return (
     <footer className="bg-navy-dark text-cream-dark/40 pt-12 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="font-display text-xl font-black text-cream-dark mb-1">
-          SoLong<span className="text-gold">Soulmate</span>.com
+        <div className="mb-1">
+          <Image
+            src="/images/logo.png"
+            alt="SoLongSoulmate.com"
+            width={160}
+            height={40}
+            className="h-8 w-auto brightness-0 invert opacity-80"
+          />
         </div>
         <p className="font-body text-[13px] mb-10">Free DIY divorce guides for all 50 states.</p>
 

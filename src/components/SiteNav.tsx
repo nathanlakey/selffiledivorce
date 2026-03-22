@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export function SiteNav() {
@@ -9,8 +10,15 @@ export function SiteNav() {
   return (
     <nav className="bg-navy sticky top-0 z-50 h-[60px] flex items-center px-6 md:px-8">
       <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
-        <Link href="/" className="font-display text-xl font-black text-cream-dark tracking-tight">
-          SoLong<span className="text-gold">Soulmate</span>.com
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="SoLongSoulmate.com"
+            width={200}
+            height={48}
+            className="h-10 w-auto brightness-0 invert"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}
