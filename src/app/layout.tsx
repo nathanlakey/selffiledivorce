@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { SiteNav } from '@/components/SiteNav'
 import { SiteFooter } from '@/components/SiteFooter'
@@ -58,6 +59,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${sourceSans.variable}`}>
       <body className="bg-cream font-body text-text antialiased">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1986240694390832"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <GoogleAnalytics measurementId={gaMeasurementId} />
         <SiteNav />
         <main>{children}</main>
