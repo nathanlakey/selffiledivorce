@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { US_STATES } from '@/lib/states'
 
 interface StateGuideLayoutProps {
   stateName: string
@@ -123,11 +124,55 @@ export function StateGuideLayout({
               Do I Need a Lawyer? →
             </Link>
           </div>
+
+          {/* Related state guides */}
+          {(() => {
+            const stateIndex = US_STATES.findIndex(s => s.slug === stateSlug)
+            const relatedStates = [
+              US_STATES[stateIndex - 1],
+              US_STATES[stateIndex + 1],
+              US_STATES[stateIndex + 2],
+            ].filter(Boolean).slice(0, 3)
+            return relatedStates.length > 0 ? (
+              <div className="mt-6 bg-white border border-border rounded-md p-4">
+                <p className="font-body text-[10px] font-bold tracking-[2px] uppercase text-gold mb-3">
+                  Other State Guides
+                </p>
+                {relatedStates.map(s => (
+                  <Link
+                    key={s.slug}
+                    href={`/${s.slug}-divorce`}
+                    className="block font-body text-sm text-text-muted hover:text-gold py-1.5 border-b border-border-light last:border-b-0 transition-colors"
+                  >
+                    {s.name} Divorce Guide →
+                  </Link>
+                ))}
+              </div>
+            ) : null
+          })()}
         </aside>
 
         {/* Main content */}
         <article className="prose-content min-w-0">
           {children}
+
+          {/* Author byline */}
+          <div className="flex items-center gap-4 mt-10 pt-6 border-t border-border">
+            <div className="w-12 h-12 rounded-full bg-navy flex items-center justify-center flex-shrink-0">
+              <span className="font-display text-lg font-bold text-gold">N</span>
+            </div>
+            <div>
+              <p className="font-body text-sm font-semibold text-navy">
+                Written by the SoLongSoulmate.com Editorial Team
+              </p>
+              <p className="font-body text-xs text-text-light leading-relaxed">
+                Researched using official state court websites, state statutes,
+                and legal aid resources. All filing fees and procedures verified
+                March 2026. This is general legal information — not legal advice.
+              </p>
+            </div>
+          </div>
+
           {frontmatter?.lastUpdated && (
             <p className="font-body text-xs text-text-light mt-12 pt-6 border-t border-border">
               Last reviewed: {frontmatter.lastUpdated} · Verify current fees and forms with your local court before filing.

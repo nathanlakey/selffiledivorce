@@ -144,6 +144,25 @@ export default function AboutPage() {
       </p>
 
       {/* How we're funded */}
+      <h2>Who We Are</h2>
+      <p>
+        SoLongSoulmate.com was founded in 2026 by a team based in Texas with
+        a simple goal: make the divorce process less confusing for people who
+        don't need a lawyer. Every state guide is researched directly from
+        official court websites, state statutes, and legal aid resources — not
+        adapted from generic templates.
+      </p>
+      <p>
+        We update our content when laws change, filing fees are revised, or
+        courts update their forms. If you find an error or outdated information,
+        please contact us at{' '}
+        <a href="mailto:legal@solongsoulmate.com" className="text-gold hover:text-gold-dark">
+          legal@solongsoulmate.com
+        </a>{' '}
+        — we take accuracy seriously.
+      </p>
+
+      {/* How we're funded */}
       <h2>How This Site Is Funded</h2>
       <p>Everything on SoLongSoulmate.com is free to access. We fund the site through two sources:</p>
       <div className="bg-cream-dark border border-border rounded-sm p-6 my-4 not-prose">

@@ -68,9 +68,11 @@ export async function generateMetadata({
   const data = getStateContent(stateSlug, guideType)
   const canonicalUrl = `https://solongsoulmate.com/${slug}`
 
-  const title =
-    data?.frontmatter.title ??
-    `How to File for Divorce in ${stateObj.name} Without a Lawyer (2026)`
+  const currentYear = new Date().getFullYear()
+  const title = guideType === 'main'
+    ? (data?.frontmatter.title ?? `How to File for Divorce in ${stateObj.name} Without a Lawyer`) +
+      (data?.frontmatter.title?.includes(String(currentYear)) ? '' : ` (${currentYear})`)
+    : (data?.frontmatter.title ?? `How to File for Divorce in ${stateObj.name} Without a Lawyer (${currentYear})`)
   const description =
     data?.frontmatter.description ??
     `Complete guide to ${stateObj.name} divorce — forms, fees, timelines, and step-by-step instructions.`
@@ -139,9 +141,71 @@ export default async function StateGuidePage({
   // currentGuide passed to layout is '' for main or '-without-children' etc. (dash-prefixed)
   const currentGuide = guideSuffix === '' ? '' : `-${guideSuffix}`
 
+  const faqJsonLd = guideType === 'main' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How long does divorce take in ${stateObj.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: data?.frontmatter.waitPeriod
+            ? `The mandatory waiting period in ${stateObj.name} is ${data.frontmatter.waitPeriod}. Uncontested divorces typically finalize in 2–6 months total.`
+            : `Uncontested divorces in ${stateObj.name} typically finalize in 2–6 months.`
+        }
+      },
+      {
+        '@type': 'Question',
+        name: `How much does it cost to file for divorce in ${stateObj.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: data?.frontmatter.filingFee
+            ? `The court filing fee in ${stateObj.name} is ${data.frontmatter.filingFee}. A complete DIY divorce typically costs $300–$700 including all fees.`
+            : `Filing fees vary by county in ${stateObj.name}. A complete DIY divorce typically costs $300–$700.`
+        }
+      },
+      {
+        '@type': 'Question',
+        name: `Do I need a lawyer to get divorced in ${stateObj.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `You do not need a lawyer to file for divorce in ${stateObj.name} if both spouses agree on all terms. ${stateObj.name} provides free official court forms for self-represented filers.`
+        }
+      }
+    ]
+  } : null
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://solongsoulmate.com'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Divorce by State',
+        item: 'https://solongsoulmate.com/divorce-by-state'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `${stateObj.name} Divorce Guide`,
+        item: `https://solongsoulmate.com/${slug}`
+      }
+    ]
+  }
+
   return (
     <>
       <JsonLd data={jsonLd} />
+      {faqJsonLd && <JsonLd data={faqJsonLd} />}
+      <JsonLd data={breadcrumbJsonLd} />
       <StateGuideLayout
         stateName={stateObj.name}
         stateSlug={stateObj.slug}
