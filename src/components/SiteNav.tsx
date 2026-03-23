@@ -13,7 +13,12 @@ export function SiteNav() {
           <img
             src="/images/logo.png"
             alt="SoLongSoulmate.com"
-            style={{ height: '44px', width: 'auto', display: 'block' }}
+            style={{
+              height: '55px',
+              width: 'auto',
+              objectFit: 'cover',
+              objectPosition: 'center',
+            }}
           />
         </Link>
 
