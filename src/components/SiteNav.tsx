@@ -9,17 +9,16 @@ export function SiteNav() {
   return (
     <nav className="bg-navy sticky top-0 z-50 h-[60px] flex items-center px-6 md:px-8">
       <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
-        <Link href="/">
-          <img
-            src="/images/logo.png"
-            alt="SoLongSoulmate.com"
-            style={{
-              height: '55px',
-              width: 'auto',
-              objectFit: 'cover',
-              objectPosition: 'center',
-            }}
-          />
+        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+          <span className="text-2xl leading-none">💔</span>
+          <div className="leading-none">
+            <span className="font-display text-lg font-normal italic text-cream-dark">
+              So Long,{' '}
+            </span>
+            <span className="font-display text-lg font-bold text-cream-dark">
+              Soulmate
+            </span>
+          </div>
         </Link>
 
         {/* Desktop links */}
