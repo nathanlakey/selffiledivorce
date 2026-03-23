@@ -121,8 +121,8 @@ export function HomepageClient() {
               Free · All 50 States · Updated 2026
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-[64px] font-black leading-[1.07] text-cream-dark mb-7 tracking-tight">
-              File for Divorce<br />
-              <span className="text-gold">Without a Lawyer.</span>
+              Your Complete Guide to<br />
+              <span className="text-gold">Divorce in Every State.</span>
             </h1>
             <p className="font-body text-lg leading-relaxed text-cream-dark/70 mb-10 max-w-lg">
               Complete state-by-state guides covering every step of the DIY divorce process — forms, filing fees, timelines, property division, and everything in between. Free for all 50 states.
