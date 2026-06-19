@@ -54,7 +54,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? ''
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-00DWT8ZFXS'
 
   return (
     <html lang="en" className={`${playfair.variable} ${sourceSans.variable}`}>
